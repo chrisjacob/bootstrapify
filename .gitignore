@@ -1,0 +1,50 @@
+# Source: https://github.com/paulirish/html5-boilerplate/blob/2ba5f9d80d7d44565753f23e236d984e3e237b34/.gitignore
+# History: https://github.com/paulirish/html5-boilerplate/commits/master/.gitignore
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# Komodo
+*.komodoproject
+.komodotools
+
+# Folders to ignore
+.hg
+.svn
+.CVS
+intermediate
+publish
+.idea
+
+# Build script local files
+build/buildinfo.properties
+build/config/buildinfo.properties
+
+# Shopify Theme CLI Settings https://github.com/Shopify/shopify_theme
+config.yml
+
+# Shopify Textmate Bundle Settings https://github.com/meeech/shopify.tmbundle
+.shopify-tmbundle

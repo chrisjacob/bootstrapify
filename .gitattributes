@@ -1,0 +1,7 @@
+# Source: https://github.com/paulirish/html5-boilerplate/blob/994cd0801d8793e405c50a5f4f1e32aab7f29597/.gitattributes
+# History: https://github.com/paulirish/html5-boilerplate/commits/master/.gitattributes
+
+# Instruct git to detect text files, and normalize to LF at each commit.
+# Reference: https://github.com/paulirish/html5-boilerplate/commit/7f31896fd4462c4e50748f71b24a3fb1cd375ea1#commitcomment-525963
+
+* text=auto
