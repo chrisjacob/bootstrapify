@@ -1,0 +1,15 @@
+{% if settings.homepage != blank %}
+	<h1>
+		{{ pages[settings.homepage].title }}
+	</h1>
+{% else %}
+	<h1>
+		Homepage
+	</h1>
+{% endif %}
+
+{% if settings.homepage != blank %}
+	<div id="homepage_content">
+		{{ pages[settings.homepage].content }}
+	</div>
+{% endif %}
