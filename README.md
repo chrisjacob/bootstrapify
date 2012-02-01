@@ -2,13 +2,15 @@
 A *paid* [Shopify Theme](http://themes.shopify.com/) powered by [Twitter Bootstrap v2.0](http://twitter.github.com/bootstrap/).
 
 ## STATUS
+
 **01 Feb 2012** - *Under development* 
- - Aiming to release within the next 10 days (10 Feb 2012).  
- - Plan sell in the [Shopify Theme Store](http://themes.shopify.com/) - at [their minimum](http://themes.shopify.com/services/themes/guidelines/) **paid** price point of $80.  
- - Expect to launch with 1 preset theme and release 3 more variations (which are included in the purchase) within 30 days following the initial release (1 new variation every 10 days: 20 February, 1 March, 11 March).  
- - I will fully support the theme and contribute any bug fixes back into the Twitter Bootstrap project.  
- - This project will be kept open source (even though it's a paid theme). I trust people will be honest and pay for the theme if they use it as a foundation for their store ... think - if you charge $40/hr and this code saves you >2hrs work (and trust me it will!) then bill your client, and flick me the $80 to continue maintaining & supporting this theme.  
- - I will keep this theme up-to-date with all future Twitter Bootstrap releases.  
+
+ - Aiming to release within the next 10 days (10 Feb 2012).
+ - Plan sell in the [Shopify Theme Store](http://themes.shopify.com/) - at [their minimum](http://themes.shopify.com/services/themes/guidelines/) **paid** price point of $80.
+ - Expect to launch with 1 preset theme and release 3 more variations (which are included in the purchase) within 30 days following the initial release (1 new variation every 10 days: 20 February, 1 March, 11 March).
+ - I will fully support the theme and contribute any bug fixes back into the Twitter Bootstrap project.
+ - This project will be kept open source (even though it's a paid theme). I trust people will be honest and pay for the theme if they use it as a foundation for their store ... think - if you charge $40/hr and this code saves you >2hrs work (and trust me it will!) then bill your client, and flick me the $80 to continue maintaining & supporting this theme.
+ - I will keep this theme up-to-date with all future Twitter Bootstrap releases.
 
 ## TODOs
 
