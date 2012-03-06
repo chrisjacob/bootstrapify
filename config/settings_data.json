@@ -1,71 +1,25 @@
 {
-	"presets": {
-		"Light": {
-			
-			// General Theme Options
-			// ------------------------------------------
-			// "favicon" : "favicon.png",
-         
+  "presets": {
+    "Default": {
 
-			// Layout Colors and Backgrounds
-			// ------------------------------------------
-			"bs_background_color": "#FFFFFF",
-			"bs_use_background_image": true,
-			// "bs_custom_background_image" : "bs_custom_background_image.png"
-			"bs_background_image_select": "bs_light_background_image.png",
+      // General theme options
+      // ==============================================================
+      "theme_name" : "Default",
 
-			"bs_use_content_background_color": false,
-			"bs_content_background_color": "#EEEEEE",
+      // Additional layouts
+      // ==============================================================
+      "customer_layout": "theme"
+    },
+    "Custom": {
+      
+      // General theme options
+      // ==============================================================
+      "theme_name" : "Custom",
 
-
-			// Additional Layouts
-			// ------------------------------------------
-			"customer_layout": "theme"
-		},
-		"Dark": {
-			
-			// General Theme Options
-			// ------------------------------------------
-			// "favicon" : "favicon.png",
-         
-
-			// Layout Colors and Backgrounds
-			// ------------------------------------------
-			"bs_background_color": "#000000",
-			"bs_use_background_image": false,
-			// "bs_custom_background_image" : "bs_custom_background_image.png"
-			"bs_background_image_select": "bs_dark_background_image.png",
-
-
-			"bs_use_content_background_color": false,
-			"bs_content_background_color": "#333333",
-	
-			// Additional Layouts
-			// ------------------------------------------
-			"customer_layout": "theme"
-		},
-		"Dark Fluid": {
-			
-			// General Theme Options
-			// ------------------------------------------
-			// "favicon" : "favicon.png",
-         
-
-			// Layout Colors and Backgrounds
-			// ------------------------------------------
-			"bs_background_color": "#000000",
-			"bs_use_background_image": false,
-			// "bs_custom_background_image" : "bs_custom_background_image.png"
-			"bs_background_image_select": "bs_dark_background_image.png",
-
-
-			"bs_use_content_background_color": false,
-			"bs_content_background_color": "#333333",
-	
-			// Additional Layouts
-			// ------------------------------------------
-			"customer_layout": "fluid"
-		}
-	},
-	"current": "Light"
+      // Additional layouts
+      // ==============================================================
+      "customer_layout": "theme"
+    }
+  },
+  "current": "Default"
 }

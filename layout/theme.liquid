@@ -1,28 +1,32 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<link rel="shortcut icon" type="image/x-icon" href="{{ 'favicon.png' | asset_url }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ 'favicon.ico' | asset_url }}">
 
-    	{{ 'styles.css' | asset_url | stylesheet_tag }}
+    {{ 'styles.css' | asset_url | stylesheet_tag }}
 
-		<!-- content_for_header -->
-		{{ content_for_header }}
-		<!-- /content_for_header -->
-	</head>
+    <!-- Start content_for_header
+    ============================================================== -->
+    {{ content_for_header }}
+    <!-- End content_for_header
+    ============================================================== -->
+  </head>
 
-	<body>
-		<h1>
-			Bootstrapify!
-		</h1>
-		
-		<div id="content">
-			{% include "social-buttons" with "global" %}
-			
-			<!-- content_for_layout -->
-			{{ content_for_layout }}
-			<!-- /content_for_layout -->
-		</div>
-	</body>
+  <body>
+    <h1>
+      Bootstrapify!{% if settings.theme_name != blank %} &mdash; {{ settings.theme_name }}{% endif %}
+    </h1>
+
+    <div id="content">
+      {% include "social_buttons" %}
+
+      <!-- Start content_for_layout
+      ============================================================== -->
+      {{ content_for_layout }}
+      <!-- End content_for_layout
+      ============================================================== -->
+    </div>
+  </body>
 </html>
