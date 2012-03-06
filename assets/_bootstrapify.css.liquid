@@ -1,0 +1,112 @@
+/* HTML5 Boilerplate Styles (hand picked for Bootstrap compatibility)
+============================================================================= */
+/* Chrome Frame Prompt */
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+
+
+/* Bootstrap Styles (for Shopify compatibility)
+============================================================================= */
+/* Fix Bootstrap image paths */
+[class^="icon-"], [class*=" icon-"] {
+  background-image: url("{{ 'glyphicons-halflings.png' | asset_url }}");
+}
+.icon-white {
+  background-image: url("{{ 'glyphicons-halflings-white.png' | asset_url }}");
+}
+
+
+
+
+
+
+
+
+/* Primary styles
+ - Author: Chris Jacob
+============================================================================= */
+
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+
+
+/* Media queries
+ - using breakpoints and hierarchy from bootstrap-responsive.css
+============================================================================= */
+
+@media (max-width: 480px) {
+  
+}
+ 
+@media (max-width: 767px) { 
+  
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  
+}
+
+@media (max-width: 979px) {
+  
+}
+
+@media (min-width: 980px) {
+  
+}
+
+@media (min-width: 1200px) {
+  
+}
+
+
+
+
+
+/* Non-semantic helper classes
+ - Please define your styles before this section.
+============================================================================= */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: http://h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: http://h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: http://h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: http://h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+
+/* Print styles
+ - Inlined to avoid required HTTP connection: http://h5bp.com/r
+============================================================================= */
+
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: http://h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* http://h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
