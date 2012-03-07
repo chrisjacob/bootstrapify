@@ -1,0 +1,40 @@
+/* Bootstrap Styles (for Shopify compatibility)
+ - Change the style of Shopify's checkout system http://wiki.shopify.com/Checkout_CSS
+============================================================================= */
+
+
+/* Undo background and gradient */
+body, #main, #container, #header, #footer {
+  background: #fff !important;
+}
+
+
+{% comment %}
+/* Undo overview background and borders */
+#main #overview {
+  background: #fff;
+  border: none;
+}
+#main #overview > * {
+  border: none;
+}
+#main #thumbs div {
+  border: none;
+}
+
+/* Insert your own logo (upload separately) */
+#logo { 
+  height: 65px;
+  background: url({{ 'logo-checkout.png' | asset_url | replace: 'http://','https://' }}) center no-repeat;
+}
+
+#header > h1{
+  text-align:center;
+}
+
+/* Hide the name of the store because we got this nifty logo now */
+
+#header > h1 span.title {
+  display:none;
+}
+{% endcomment %}
