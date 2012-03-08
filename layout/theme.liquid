@@ -101,7 +101,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ 'favicon.ico' | asset_url }}">
 
 
-    <!-- Stylesheets in HEAD
+    <!-- Stylesheets
     ============================================================================= -->
     <link rel="stylesheet" href="{{ 'bootstrap.css' | asset_url }}">
     <link rel="stylesheet" href="{{ 'bootstrap-responsive.css' | asset_url }}">
@@ -124,10 +124,10 @@
     {% endif %}
     
     
-    <!-- Start content_for_header
+    <!-- Start content_for_header [shopify]
     ============================================================================= -->
     {{ content_for_header }}
-    <!-- End content_for_header
+    <!-- End content_for_header [shopify]
     ============================================================================= -->
   </head>
 
@@ -196,10 +196,10 @@
       
       <div class="row">
         <div class="span12">
-          <!-- Start content_for_layout
+          <!-- Start content_for_layout [shopify]
           ============================================================================= -->
           {{ content_for_layout }}
-          <!-- End content_for_layout
+          <!-- End content_for_layout [shopify]
           ============================================================================= -->  
         </div>
       </div>
@@ -220,11 +220,7 @@
     
     
     
-    
-    
 
-    <!-- Stylesheets in BODY
-    ============================================================================= -->
     
     <!-- JavaScript in BODY:
        * JavaScript at the bottom for fast page loading
