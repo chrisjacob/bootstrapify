@@ -24,12 +24,11 @@ window.log = function f(){ log.history = log.history || []; log.history.push(arg
 
 log('Bootstrapify!');
 
-// fix sub nav on scroll
+// fix subnav on scroll
 var $win = $(window)
-  , $nav = $('.subnav')
-  , $brand = $('.brand')
+  , $subnav = $('.subnav')
   , navTop = $('.subnav').length && $('.subnav').offset().top - 40
-  , isFixed = 0
+  , isSubnavFixed = 0
 
 processScroll()
 
@@ -37,14 +36,12 @@ $win.on('scroll', processScroll)
 
 function processScroll() {
   var i, scrollTop = $win.scrollTop()
-  if (scrollTop >= navTop && !isFixed) {
-    isFixed = 1
-    $nav.addClass('subnav-fixed')
-    $brand.removeClass('hidden')
-  } else if (scrollTop <= navTop && isFixed) {
-    isFixed = 0
-    $nav.removeClass('subnav-fixed')
-    $brand.addClass('hidden')
+  if (scrollTop >= navTop && !isSubnavFixed) {
+    isSubnavFixed = 1
+    $subnav.addClass('subnav-fixed')
+  } else if (scrollTop <= navTop && isSubnavFixed) {
+    isSubnavFixed = 0
+    $subnav.removeClass('subnav-fixed')
   }
 }
 
