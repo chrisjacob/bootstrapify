@@ -5,16 +5,22 @@
       // General theme options
       // ==============================================================
       "theme_name" : "Default",
+      "use_logo": true,
+      "main_linklist": "main-menu",
+      
 
       // Additional layouts
       // ==============================================================
       "customer_layout": "theme"
     },
-    "Custom": {
+    "Facebook": {
       
       // General theme options
       // ==============================================================
-      "theme_name" : "Custom",
+      "theme_name" : "Facebook",
+      "use_logo": false,
+      "main_linklist": "main-menu",
+      
 
       // Additional layouts
       // ==============================================================
