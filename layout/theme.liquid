@@ -140,31 +140,168 @@
     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
     
     
-    
-    
-    
-    
+    <!-- Navbar
+       * http://twitter.github.com/bootstrap/components.html#navbar
+    ============================================================================= -->
+
+
+<!-- 
+<a class="btn btn-primary pull-left" href="#"><i class="icon-home icon-white"></i></a>
+<div class="divider-vertical pull-left"></div>
+
+<div class="btn-group pull-left">
+  <a class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user icon-white"></i> <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Reset password</a></li>
+  </ul>
+</div>
+-->
+
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"> 
+          
+          <div class="pull-left">
+            <form class="bootstrapify-search pull-left">
+              <input type="search" placeholder="Search..." x-webkit-speech="">
+            </form>
+          </div>
+          
+          <a class="brand hidden" href="/">{{ shop.name }}</a>
+          
+          <div class="pull-right">
+            {% if shop.customer_accounts_enabled %}
+              <div class="pull-left">
+                <a class="btn btn-inverse" href="/account"><i class="icon-user icon-white"></i> Login</a>
+              </div>
+              <div class="divider-vertical pull-left"></div>
+            {% endif %}
+            <div class="btn-group pull-left">
+              <a class="btn btn-inverse" href="/cart"><i class="icon-shopping-cart icon-white"></i> Cart ({{ cart.item_count }})</a>
+              <a class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                {% if cart.item_count == 0 %}
+                  <li><a href="#">There are no items in your cart.</a></li>
+                {% else %}
+                  <li><a href="#">1 x Item 1</a></li>
+                  <li><a href="#">1 x Item 2</a></li>
+                  <li><a href="#">2 x Item 3</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/checkout"><i class="icon-share-alt"></i> Checkout</a></li>
+                {% endif %}
+              </ul>
+            </div>
+            <div class="divider-vertical pull-left"></div>
+            <a class="btn btn-success pull-left" href="{% if cart.item_count == 0 %}/cart{% else %}/checkout{% endif %}">Checkout</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    {% comment %}
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          
+          <div class="pull-left">
+            <form class="bootstrapify-search pull-left">
+              <input type="search" placeholder="Search..." x-webkit-speech="">
+            </form>
+          </div>
+          
+          <a class="brand" href="#">Bootstrapify</a>
+          
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
-          <div class="nav-collapse">
+          <div class="nav-collapse pull-right">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li class="active">
+                <a href="#">Home</a>
+              </li>
+              <li class="">
+                <a href="#">Search</a>
+              </li>
+              <li class="">
+                <a href="#">My Account</a>
+              </li>
+              <li class="">
+                <a href="#">Cart (4)</a>
+              </li>
+              <li class="">
+                <a href="#">Checkout</a>
+              </li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    {% endcomment %}
+    
+    <div class="container logo">
+      <div class="row-fluid">
+        <div class="span12">
+          <a href="/">
+            {% if settings.use_logo %}
+              <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" />
+            {% else %}
+              {{ shop.name }}
+            {% endif %}
+          </a>
         </div>
       </div>
     </div>
 
     <div class="container" role="main">
+
+      <!-- Masthead
+      ============================================================================= -->
+      
+      <header class="jumbotron subhead" id="overview">
+        <!--
+        <h1>
+          Scaffolding
+        </h1>
+        <p class="lead">
+          Bootstrap is built on a responsive 12-column grid. We've also included fixed- and fluid-width layouts based on that system.
+        </p>
+        -->
+        <div class="subnav">
+          <!-- level 1 -->
+          <ul class="nav nav-pills">
+            {% for link in linklists[settings.main_linklist].links %}
+              {% if linklists[link.handle] == empty %}
+                  <li class="{% if link.active %}active{% endif %}">
+                    <a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+                  </li>
+                {% else %}
+                  <li class="dropdown {% if link.active %}active{% endif %} {% for link in linklists[link.handle].links %}{% if link.active %}active{% endif %}{% endfor %}">
+                    <a href="#" title="{{ link.title }}" class="dropdown-toggle" data-toggle="dropdown">{{ link.title }} <b class="caret"></b></a> 
+                    <!-- level 2 -->
+                    <ul class="dropdown-menu">
+                      {% for link in linklists[link.handle].links %}
+                        <li class="{% if link.active %}active{% endif %}">
+                          <a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </header>
+
+
+
+
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
